@@ -12,7 +12,7 @@ public class Input {
 	private Input() {
 	}
 
-	public static Cars carName() {
+	public static Cars insertCarName() {
 		try {
 			Output.showCarName();
 			String inputValue = scan.nextLine();
@@ -20,18 +20,18 @@ public class Input {
 			return new Cars(names);
 		} catch (IllegalArgumentException e) {
 			Output.errorMessage(e.getMessage());
-			return carName();
+			return insertCarName();
 		}
 	}
 
-	public static Attempt attempt() {
+	public static Attempt insertAttempt() {
 		try {
 			Output.showAttempt();
 			String inputValue = scan.nextLine();
 			return new Attempt(inputValue);
 		} catch (IllegalArgumentException e) {
 			Output.errorMessage(e.getMessage());
-			return attempt();
+			return insertAttempt();
 		}
 	}
 }
