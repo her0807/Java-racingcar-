@@ -14,7 +14,7 @@ public class Input {
 
 	public static Cars carName() {
 		try {
-			Output.carNameGuide();
+			Output.showCarName();
 			String inputValue = scan.nextLine();
 			String[] names = inputValue.split(DELIMITER);
 			return new Cars(names);
@@ -26,7 +26,7 @@ public class Input {
 
 	public static Attempt attempt() {
 		try {
-			Output.attemptGuide();
+			Output.showAttempt();
 			String inputValue = scan.nextLine();
 			return new Attempt(inputValue);
 		} catch (IllegalArgumentException e) {
